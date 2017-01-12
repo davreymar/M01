@@ -10,6 +10,17 @@
 
 <build>
 	<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<server>tomcat-development-server</server>
+					<port>8080</port>
+					<path>/${project.artifactId}</path>
+				</configuration>
+			</plugin>
+
   		<!-- Make this jar executable -->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
